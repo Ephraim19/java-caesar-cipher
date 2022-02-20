@@ -9,7 +9,10 @@ public class App {
      Scanner myConsole = new Scanner(System.in);
      System.out.println("Enter your word");
      String myWord = myConsole.nextLine();
-     Caesar caesar = new Caesar(myWord.toLowerCase(Locale.ROOT));
+     System.out.println("Enter the key");
+     String myStringKey = myConsole.nextLine();
+     int myKey = Integer.parseInt(myStringKey);
+     Caesar caesar = new Caesar(myWord.toLowerCase(Locale.ROOT),myKey);
      System.out.println("Do you want to encrypt or decrypt");
      String functionality = myConsole.nextLine();
      String wordResult = "";
