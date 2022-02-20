@@ -10,12 +10,12 @@ public class App {
      System.out.println("Enter your word");
      String myWord = myConsole.nextLine();
      Caesar caesar = new Caesar(myWord.toLowerCase(Locale.ROOT));
-     System.out.println("Do you want to decode or encode");
+     System.out.println("Do you want to encrypt or decrypt");
      String functionality = myConsole.nextLine();
      String wordResult = "";
-     if (Objects.equals(functionality, "encode")){
+     if (Objects.equals(functionality, "encrypt")){
          wordResult = caesar.encodeLetters();
-     }else if (Objects.equals(functionality,"decode")) {
+     }else if (Objects.equals(functionality,"decrypt")) {
          wordResult = caesar.decodeLetters();
      }else {
          System.out.println("Please enter the functionality");

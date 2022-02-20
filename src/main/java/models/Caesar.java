@@ -22,17 +22,19 @@ public class Caesar {
         String returnLetters = null;
         for (i = 0; i < userLetters.length; i++) {
             char firstLetter = userLetters[i];
-            int originalIndex = "abcdefghijklmnopqrstvuwxyz".indexOf(firstLetter);
-            int newIndex = 0;
-            newIndex = originalIndex - 3;
-            if (newIndex== -1) {
+            Integer originalIndex = "abcdefghijklmnopqrstvuwxyz".indexOf(firstLetter);
+            Integer newIndex = 0;
+            if (originalIndex > 2) {
+                newIndex = originalIndex - 3;
+            } else if (newIndex.equals(2)) {
                 newIndex = 25;
-            } else if (newIndex == -2){
+            } else if (newIndex.equals(1)){
                 newIndex = 24;
-            } else if (newIndex == -3){
+            } else if(newIndex.equals(0)) {
                 newIndex = 23;
+            }else {
+                newIndex = Integer.valueOf("");
             }
-            System.out.println(newIndex);
             char newLetter = allLeters[newIndex];
             userLetters[i] = newLetter;
             returnLetters = String.valueOf(userLetters);
@@ -48,15 +50,17 @@ public class Caesar {
         for (i = 0; i < userLetters.length; i++) {
             char firstLetter = userLetters[i];
             int originalIndex = "abcdefghijklmnopqrstvuwxyz".indexOf(firstLetter);
-            int newIndex = 0;
+            Integer newIndex = 0;
             if (originalIndex < 23) {
                 newIndex = originalIndex + 3;
-            } else if (newIndex == 23) {
+            } else if (newIndex.equals(23)) {
                 newIndex = 0;
-            } else if (newIndex == 24){
+            } else if (newIndex.equals(24)){
                 newIndex = 1;
-            } else {
+            } else if(newIndex.equals(25)) {
                 newIndex = 2;
+            }else {
+                newIndex = Integer.valueOf("");
             }
             char newLetter = allLeters[newIndex];
             userLetters[i] = newLetter;
