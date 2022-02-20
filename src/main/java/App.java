@@ -12,11 +12,13 @@ public class App {
      Caesar caesar = new Caesar(myWord.toLowerCase(Locale.ROOT));
      System.out.println("Do you want to decode or encode");
      String functionality = myConsole.nextLine();
-     String wordResult;
+     String wordResult = "";
      if (Objects.equals(functionality, "encode")){
          wordResult = caesar.encodeLetters();
-     }else {
+     }else if (Objects.equals(functionality,"decode")) {
          wordResult = caesar.decodeLetters();
+     }else {
+         System.out.println("Please enter the functionality");
      }
      System.out.println(wordResult.toUpperCase(Locale.ROOT));
     }
