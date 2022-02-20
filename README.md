@@ -1,5 +1,4 @@
-# CAESAR CIPHE8
-
+# CAESAR CIPHER
 #### This is a project that uses the caesar cipher method to encrypt and decrypt texts. 18th February, 2022.
 #### By Ephraim
 ## Description
