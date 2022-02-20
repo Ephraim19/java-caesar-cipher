@@ -11,11 +11,6 @@ public class Caesar {
         this.shiftKey = shiftKey;
     }
 
-    public String getLettersToReplace() {
-        letters = "the".replace('t','q');
-        return letters;
-    }
-
     public String encodeLetters() {
         char[] userLetters = letters.toCharArray();
         char[] allLeters = "abcdefghijklmnopqrstvuwxyz".toCharArray();
@@ -23,7 +18,7 @@ public class Caesar {
         String returnLetters = null;
         for (i = 0; i < userLetters.length; i++) {
             char firstLetter = userLetters[i];
-            int originalIndex = "abcdefghijklmnopqrstvuw".indexOf(firstLetter);
+            int originalIndex = "abcdefghijklmnopqrstvuwxyz".indexOf(firstLetter);
 
             Integer newIndex = originalIndex - shiftKey;
             char newLetter = 0;
