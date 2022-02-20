@@ -22,13 +22,16 @@ public class Caesar {
 
             Integer newIndex = originalIndex - shiftKey;
             char newLetter = 0;
-            if (newIndex >= 0) {
+            if (newIndex >= 0 && firstLetter != ' ') {
                 newLetter = allLeters[newIndex];
-            } else {
+            } else if (newIndex <= -1 && firstLetter != ' '){
                 newLetter = allLeters[newIndex + 26];
+            }else {
+                newLetter = ' ';
             }
             userLetters[i] = newLetter;
             returnLetters = String.valueOf(userLetters);
+
         }
         return returnLetters;
 
@@ -44,10 +47,12 @@ public class Caesar {
             int originalIndex = "abcdefghijklmnopqrstvuwxyz".indexOf(firstLetter);
             Integer newIndex = originalIndex + shiftKey;
             char newLetter = 0;
-            if (newIndex <= 25) {
+            if (newIndex <= 25 && firstLetter != ' ' ) {
                 newLetter = allLeters[newIndex];
-            }else {
+            }else if (newIndex >= 26 && firstLetter != ' ') {
                 newLetter =allLeters[newIndex - 26];
+            }else {
+                newLetter = ' ';
             }
             userLetters[i] = newLetter;
             returnLetters = String.valueOf(userLetters);
