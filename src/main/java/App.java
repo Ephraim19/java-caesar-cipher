@@ -1,5 +1,6 @@
 import models.Caesar;
 
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class App {
      Scanner myConsole = new Scanner(System.in);
      System.out.println("Enter your word");
      String myWord = myConsole.nextLine();
-     Caesar caesar = new Caesar(myWord);
+     Caesar caesar = new Caesar(myWord.toLowerCase(Locale.ROOT));
      System.out.println("Do you want to decode or encode");
      String functionality = myConsole.nextLine();
      String wordResult;
@@ -17,6 +18,6 @@ public class App {
      }else {
          wordResult = caesar.decodeLetters();
      }
-     System.out.println(wordResult);
+     System.out.println(wordResult.toUpperCase(Locale.ROOT));
     }
 }

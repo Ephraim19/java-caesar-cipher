@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Locale;
+
 public class Caesar {
     private String letters;
 
@@ -13,6 +15,7 @@ public class Caesar {
     }
 
     public String encodeLetters() {
+        //String lowercaseWord = letters.toLowerCase();
         char[] userLetters = letters.toCharArray();
         char[] allLeters = "abcdefghijklmnopqrstvuwxyz".toCharArray();
         int i = 0;
