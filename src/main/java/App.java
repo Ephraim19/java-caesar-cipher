@@ -9,11 +9,11 @@ public class App {
      Scanner myConsole = new Scanner(System.in);
      System.out.println("Enter your word");
      String myWord = myConsole.nextLine();
-     System.out.println("Enter the key");
+     System.out.println("Enter the shift key (Key 23 encrypts and decrypts the sentence: THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG");
      String myStringKey = myConsole.nextLine();
      int myKey = Integer.parseInt(myStringKey);
      Caesar caesar = new Caesar(myWord.toLowerCase(Locale.ROOT),myKey);
-     System.out.println("Do you want to encrypt or decrypt");
+     System.out.println("Do you want to encrypt or decrypt ?");
      String functionality = myConsole.nextLine();
      String wordResult = "";
      if (Objects.equals(functionality, "encrypt")){
