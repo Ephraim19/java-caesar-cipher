@@ -12,14 +12,14 @@ class CaesarTest {
     }
 
     @Test
-    void newCaesar_checksEncoding_t() {
-        Caesar myCharArray = new Caesar("t",3);
-        assertEquals("q",myCharArray.encodeLetters());
+    void newCaesar_checksDecoding_returnsT() {
+        Caesar myCharArray = new Caesar("q",23);
+        assertEquals("t",myCharArray.decodeLetters());
     }
 
     @Test
-    void newCaesar_checksDecoding_t() {
-        Caesar myCharArray = new Caesar("q",3);
-        assertEquals("t",myCharArray.decodeLetters());
+    void newCaesar_checksEncoding_returnsQ() {
+        Caesar myCharArray = new Caesar("t",23);
+        assertEquals("q",myCharArray.encodeLetters());
     }
 }

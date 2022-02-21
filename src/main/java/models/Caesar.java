@@ -11,7 +11,7 @@ public class Caesar {
         this.shiftKey = shiftKey;
     }
 
-    public String encodeLetters() {
+    public String decodeLetters() {
         char[] userLetters = letters.toCharArray();
         char[] allLeters = "abcdefghijklmnopqrstvuwxyz".toCharArray();
         int i = 0;
@@ -37,7 +37,7 @@ public class Caesar {
 
     }
 
-    public String decodeLetters() {
+    public String encodeLetters() {
         char[] userLetters = letters.toCharArray();
         char[] allLeters = "abcdefghijklmnopqrstvuwxyz".toCharArray();
         int i = 0;
